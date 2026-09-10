@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 void main() => runApp(const CounterApp());
 
-// 2.5 MaterialApp & 2.8 StatelessWidget
+
 class CounterApp extends StatelessWidget {
   const CounterApp({super.key});
 
@@ -11,7 +11,6 @@ class CounterApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Counter App',
-      // 2.6 Scaffold
       home: Scaffold(
         backgroundColor: const Color(0xFF8C9EFF),
         appBar: AppBar(
@@ -27,7 +26,6 @@ class CounterApp extends StatelessWidget {
   }
 }
 
-// 2.7 Типы виджетов & 2.9 StatefulWidget и его жизненный цикл
 class CounterWidget extends StatefulWidget {
   const CounterWidget({super.key});
 
@@ -36,7 +34,7 @@ class CounterWidget extends StatefulWidget {
 }
 
 class _CounterWidgetState extends State<CounterWidget> {
-  int _count = 50; // Начальное состояние счетчика
+  int _count = 50;
 
   void _increment() {
     setState(() {
@@ -60,7 +58,7 @@ class _CounterWidgetState extends State<CounterWidget> {
           style: TextStyle(color: Colors.white, fontSize: 16),
         ),
         const SizedBox(height: 10),
-        // Белая плашка с кнопками и цифрой
+
         Container(
           padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
           decoration: BoxDecoration(
