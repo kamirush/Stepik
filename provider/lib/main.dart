@@ -11,7 +11,6 @@ void main() {
   );
 }
 
-// Модель состояния
 class ColorModel extends ChangeNotifier {
   Color _currentColor = Colors.purple;
   bool _isSwitched = false;
@@ -53,7 +52,6 @@ class HomeworkPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Получаем экземпляр модели
     final colorModel = context.watch<ColorModel>();
 
     return Scaffold(
@@ -63,7 +61,7 @@ class HomeworkPage extends StatelessWidget {
         title: Text(
           'Homework Provider',
           style: TextStyle(
-            color: colorModel.currentColor, // Цвет текста из Provider
+            color: colorModel.currentColor, 
             fontSize: 20,
             fontWeight: FontWeight.bold,
           ),
@@ -73,11 +71,10 @@ class HomeworkPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            // Цветной квадрат
             Container(
               width: 200,
               height: 200,
-              color: colorModel.currentColor, // Цвет квадрата из Provider
+              color: colorModel.currentColor,
             ),
             const SizedBox(height: 30),
             // Свитч
