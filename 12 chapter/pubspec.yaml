@@ -1,0 +1,17 @@
+name: block_flutter_example
+description: A sample Flutter application using the BLoC pattern.
+version: 1.0.0
+# repository: https://github.com/my_org/my_repo
+
+environment:
+  sdk: ^3.11.0
+
+# Add regular dependencies here.
+dependencies:
+  path: ^1.9.0
+  flutter_bloc: ^8.1.3
+  bloc: ^8.1.3
+
+dev_dependencies:
+  lints: ^6.0.0
+  test: ^1.25.6
